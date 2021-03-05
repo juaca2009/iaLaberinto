@@ -56,7 +56,7 @@ class algoritmo_genetico():
                 newGen.append([cria1.calcular_fitness(self.laberinto), cria1])
                 newGen.append([cria2.calcular_fitness(self.laberinto), cria2])
             newGen = self.seleccion(newGen)
-        print("Final Individual: ", individuosFitness[len(individuosFitness)-1][1].get_movimientos(), " ",  individuosFitness[len(individuosFitness)-1][1].puntuacionFitness)
+        print("Individuo final: ", individuosFitness[len(individuosFitness)-1][1].get_movimientos(), " ",  "puntuacion fitness: ", individuosFitness[len(individuosFitness)-1][1].puntuacionFitness)
         return individuosFitness[len(individuosFitness)-1][1].get_movimientos()
                 
 

@@ -11,6 +11,7 @@ def main():
     m = Maze(labe.lab)
     m.Visualize()
     m.RunMaze(ag.evolucion())
+    salir = input("ENTER para salir.")
     
 
 main()
