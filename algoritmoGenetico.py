@@ -13,7 +13,7 @@ class algoritmo_genetico():
         self.laberinto = _laberinto
         self.poblacion = poblacion(_tamanoPoblacion, _laberinto)
 
-    def setso(self, padre1, padre2):
+    def cruce_unPunto(self, padre1, padre2):
         padre1M = padre1.get_movimientos()
         padre2M = padre2.get_movimientos()
         puntoCorte = random.randint(0, len(padre1M))
@@ -50,7 +50,7 @@ class algoritmo_genetico():
             for i in range(cantCruce):
                 padre1 = random.choice(individuosFitness)
                 padre2 = random.choice(individuosFitness)
-                crias = self.setso(padre1[1], padre2[1])
+                crias = self.cruce_unPunto(padre1[1], padre2[1])
                 cria1 = self.mutacion(crias[0])
                 cria2 = self.mutacion(crias[1])
                 newGen.append([cria1.calcular_fitness(self.laberinto), cria1])
